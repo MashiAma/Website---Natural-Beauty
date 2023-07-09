@@ -24,7 +24,7 @@ if(isset($_POST['submit'])){
       $message[] = 'User already exist!';
    }else{
       if($pass != $cpass){
-         $message[] = 'Confirm password not matched!';
+         $message[] = 'Confirm password not matched to that you have entered one!';
       }else{
          mysqli_query($conn, "INSERT INTO `users`(name, email, password, user_type) VALUES('$name', '$email', '$pass','$type')") or die('query failed');
          $message[] = 'Registered successfully!';
